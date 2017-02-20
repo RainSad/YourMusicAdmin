@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.core.dao.sys.sysLogMapper" >
-  <resultMap id="BaseResultMap" type="com.core.model.sys.sysLog" >
+<mapper namespace="com.core.dao.sys.SysLogMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.SysLog" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="ip" property="ip" jdbcType="VARCHAR" />
     <result column="os" property="os" jdbcType="VARCHAR" />
@@ -28,7 +28,7 @@
     delete from sys_log
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.core.model.sys.sysLog" >
+  <insert id="insert" parameterType="com.core.model.sys.SysLog" >
     insert into sys_log (id, ip, os, browser, 
       opt_user, realname, is_success, 
       req_param, req_url, create_time, 
@@ -38,7 +38,7 @@
       #{reqParam,jdbcType=VARCHAR}, #{reqUrl,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{remark,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.core.model.sys.sysLog" >
+  <insert id="insertSelective" parameterType="com.core.model.sys.SysLog" >
     insert into sys_log
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -111,7 +111,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.sysLog" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.SysLog" >
     update sys_log
     <set >
       <if test="ip != null" >
@@ -147,7 +147,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.sysLog" >
+  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.SysLog" >
     update sys_log
     set ip = #{ip,jdbcType=VARCHAR},
       os = #{os,jdbcType=VARCHAR},

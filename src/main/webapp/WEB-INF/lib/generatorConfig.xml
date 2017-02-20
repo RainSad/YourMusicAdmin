@@ -38,61 +38,61 @@
 			selectByExampleQueryId="false"/> -->
 
 		
-		<table tableName="sys_area" domainObjectName="sysArea"
+		<table tableName="sys_area" domainObjectName="SysArea"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_attach" domainObjectName="sysAttach"
+		<table tableName="sys_attach" domainObjectName="SysAttach"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_department" domainObjectName="sysDepartment"
+		<table tableName="sys_department" domainObjectName="SysDepartment"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_dictionary" domainObjectName="sysDictionary"
+		<table tableName="sys_dictionary" domainObjectName="SysDictionary"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_log" domainObjectName="sysLog"
+		<table tableName="sys_log" domainObjectName="SysLog"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_resources" domainObjectName="sysResources"
+		<table tableName="sys_resources" domainObjectName="SysResources"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_role" domainObjectName="sysRole"
+		<table tableName="sys_role" domainObjectName="SysRole"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_role_resources" domainObjectName="sysRoleResources"
+		<table tableName="sys_role_resources" domainObjectName="SysRoleResources"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_user" domainObjectName="sysUser"
+		<table tableName="sys_user" domainObjectName="SysUser"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
 			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
 		</table>
-		<table tableName="sys_user_role" domainObjectName="sysUserRole"
+		<table tableName="sys_user_role" domainObjectName="SysUserRole"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">

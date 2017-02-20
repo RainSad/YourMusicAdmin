@@ -2,7 +2,7 @@ package com.core.model.sys;
 
 import java.util.Date;
 
-public class sysResources {
+public class SysResources {
     private Integer id;
 
     private String name;

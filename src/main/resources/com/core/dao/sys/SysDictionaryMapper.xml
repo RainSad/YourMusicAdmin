@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.core.dao.sys.sysDictionaryMapper" >
-  <resultMap id="BaseResultMap" type="com.core.model.sys.sysDictionary" >
+<mapper namespace="com.core.dao.sys.SysDictionaryMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.SysDictionary" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="label" property="label" jdbcType="VARCHAR" />
     <result column="value" property="value" jdbcType="VARCHAR" />
@@ -23,7 +23,7 @@
     delete from sys_dictionary
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.core.model.sys.sysDictionary" >
+  <insert id="insert" parameterType="com.core.model.sys.SysDictionary" >
     insert into sys_dictionary (id, label, value, 
       parent_id, type, status, 
       remark)
@@ -31,7 +31,7 @@
       #{parentId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
       #{remark,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.core.model.sys.sysDictionary" >
+  <insert id="insertSelective" parameterType="com.core.model.sys.SysDictionary" >
     insert into sys_dictionary
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -80,7 +80,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.sysDictionary" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.SysDictionary" >
     update sys_dictionary
     <set >
       <if test="label != null" >
@@ -104,7 +104,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.sysDictionary" >
+  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.SysDictionary" >
     update sys_dictionary
     set label = #{label,jdbcType=VARCHAR},
       value = #{value,jdbcType=VARCHAR},

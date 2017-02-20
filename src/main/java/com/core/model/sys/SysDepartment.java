@@ -2,7 +2,7 @@ package com.core.model.sys;
 
 import java.util.Date;
 
-public class sysDepartment {
+public class SysDepartment {
     private Integer id;
 
     private String deptName;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.core.dao.sys.sysAreaMapper" >
-  <resultMap id="BaseResultMap" type="com.core.model.sys.sysArea" >
+<mapper namespace="com.core.dao.sys.SysAreaMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.SysArea" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="area_code" property="areaCode" jdbcType="VARCHAR" />
     <result column="area_name" property="areaName" jdbcType="VARCHAR" />
@@ -26,7 +26,7 @@
     delete from sys_area
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.core.model.sys.sysArea" >
+  <insert id="insert" parameterType="com.core.model.sys.SysArea" >
     insert into sys_area (id, area_code, area_name, 
       parent_id, short_name, lng, 
       lat, level, sort, status
@@ -36,7 +36,7 @@
       #{lat,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{status,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.core.model.sys.sysArea" >
+  <insert id="insertSelective" parameterType="com.core.model.sys.SysArea" >
     insert into sys_area
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -103,7 +103,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.sysArea" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.SysArea" >
     update sys_area
     <set >
       <if test="areaCode != null" >
@@ -136,7 +136,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.sysArea" >
+  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.SysArea" >
     update sys_area
     set area_code = #{areaCode,jdbcType=VARCHAR},
       area_name = #{areaName,jdbcType=VARCHAR},

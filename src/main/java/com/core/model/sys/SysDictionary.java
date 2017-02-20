@@ -1,6 +1,6 @@
 package com.core.model.sys;
 
-public class sysDictionary {
+public class SysDictionary {
     private Integer id;
 
     private String label;

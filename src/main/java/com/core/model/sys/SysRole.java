@@ -2,7 +2,7 @@ package com.core.model.sys;
 
 import java.util.Date;
 
-public class sysRole {
+public class SysRole {
     private Integer id;
 
     private String roleName;

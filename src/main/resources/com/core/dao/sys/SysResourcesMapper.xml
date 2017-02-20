@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.core.dao.sys.sysResourcesMapper" >
-  <resultMap id="BaseResultMap" type="com.core.model.sys.sysResources" >
+<mapper namespace="com.core.dao.sys.SysResourcesMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.SysResources" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
@@ -29,7 +29,7 @@
     delete from sys_resources
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.core.model.sys.sysResources" >
+  <insert id="insert" parameterType="com.core.model.sys.SysResources" >
     insert into sys_resources (id, name, url, 
       parent_id, perm_code, iconCls, 
       level, sort, type, 
@@ -41,7 +41,7 @@
       #{status,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.core.model.sys.sysResources" >
+  <insert id="insertSelective" parameterType="com.core.model.sys.SysResources" >
     insert into sys_resources
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -120,7 +120,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.sysResources" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.SysResources" >
     update sys_resources
     <set >
       <if test="name != null" >
@@ -159,7 +159,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.sysResources" >
+  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.SysResources" >
     update sys_resources
     set name = #{name,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR},

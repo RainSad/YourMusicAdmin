@@ -2,7 +2,7 @@ package com.core.model.sys;
 
 import java.util.Date;
 
-public class sysAttach {
+public class SysAttach {
     private Integer id;
 
     private String name;

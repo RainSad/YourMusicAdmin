@@ -1,6 +1,6 @@
 package com.core.model.sys;
 
-public class sysUserRoleKey {
+public class SysUserRoleKey {
     private Integer userId;
 
     private Integer roleId;

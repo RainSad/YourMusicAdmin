@@ -2,7 +2,7 @@ package com.core.model.sys;
 
 import java.util.Date;
 
-public class sysLog {
+public class SysLog {
     private Integer id;
 
     private String ip;

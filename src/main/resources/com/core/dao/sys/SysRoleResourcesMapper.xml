@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.core.dao.sys.sysRoleResourcesMapper" >
-  <resultMap id="BaseResultMap" type="com.core.model.sys.sysRoleResourcesKey" >
+<mapper namespace="com.core.dao.sys.SysRoleResourcesMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.SysRoleResourcesKey" >
     <id column="role_id" property="roleId" jdbcType="INTEGER" />
     <id column="resources_id" property="resourcesId" jdbcType="INTEGER" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="com.core.model.sys.sysRoleResourcesKey" >
+  <delete id="deleteByPrimaryKey" parameterType="com.core.model.sys.SysRoleResourcesKey" >
     delete from sys_role_resources
     where role_id = #{roleId,jdbcType=INTEGER}
       and resources_id = #{resourcesId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.core.model.sys.sysRoleResourcesKey" >
+  <insert id="insert" parameterType="com.core.model.sys.SysRoleResourcesKey" >
     insert into sys_role_resources (role_id, resources_id)
     values (#{roleId,jdbcType=INTEGER}, #{resourcesId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.core.model.sys.sysRoleResourcesKey" >
+  <insert id="insertSelective" parameterType="com.core.model.sys.SysRoleResourcesKey" >
     insert into sys_role_resources
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="roleId != null" >

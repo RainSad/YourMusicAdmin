@@ -1,6 +1,6 @@
 package com.core.model.sys;
 
-public class sysArea {
+public class SysArea {
     private Integer id;
 
     private String areaCode;

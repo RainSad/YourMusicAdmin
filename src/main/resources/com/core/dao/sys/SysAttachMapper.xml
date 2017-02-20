@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.core.dao.sys.sysAttachMapper" >
-  <resultMap id="BaseResultMap" type="com.core.model.sys.sysAttach" >
+<mapper namespace="com.core.dao.sys.SysAttachMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.SysAttach" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="attach_url" property="attachUrl" jdbcType="VARCHAR" />
@@ -22,7 +22,7 @@
     delete from sys_attach
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.core.model.sys.sysAttach" >
+  <insert id="insert" parameterType="com.core.model.sys.SysAttach" >
     insert into sys_attach (id, name, attach_url, 
       relation_id, type, create_time
       )
@@ -30,7 +30,7 @@
       #{relationId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.core.model.sys.sysAttach" >
+  <insert id="insertSelective" parameterType="com.core.model.sys.SysAttach" >
     insert into sys_attach
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.sysAttach" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.SysAttach" >
     update sys_attach
     <set >
       <if test="name != null" >
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.sysAttach" >
+  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.SysAttach" >
     update sys_attach
     set name = #{name,jdbcType=VARCHAR},
       attach_url = #{attachUrl,jdbcType=VARCHAR},

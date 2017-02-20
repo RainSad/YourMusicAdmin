@@ -2,7 +2,7 @@ package com.core.model.sys;
 
 import java.util.Date;
 
-public class sysUser {
+public class SysUser {
     private Integer id;
 
     private String username;
