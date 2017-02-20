@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.core.dao.sys.sysLogMapper" >
+  <resultMap id="BaseResultMap" type="com.core.model.sys.sysLog" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="os" property="os" jdbcType="VARCHAR" />
+    <result column="browser" property="browser" jdbcType="VARCHAR" />
+    <result column="opt_user" property="optUser" jdbcType="VARCHAR" />
+    <result column="realname" property="realname" jdbcType="VARCHAR" />
+    <result column="is_success" property="isSuccess" jdbcType="VARCHAR" />
+    <result column="req_param" property="reqParam" jdbcType="VARCHAR" />
+    <result column="req_url" property="reqUrl" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, ip, os, browser, opt_user, realname, is_success, req_param, req_url, create_time, 
+    remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.core.model.sys.sysLog" >
+    insert into sys_log (id, ip, os, browser, 
+      opt_user, realname, is_success, 
+      req_param, req_url, create_time, 
+      remark)
+    values (#{id,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, #{os,jdbcType=VARCHAR}, #{browser,jdbcType=VARCHAR}, 
+      #{optUser,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, #{isSuccess,jdbcType=VARCHAR}, 
+      #{reqParam,jdbcType=VARCHAR}, #{reqUrl,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.core.model.sys.sysLog" >
+    insert into sys_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="os != null" >
+        os,
+      </if>
+      <if test="browser != null" >
+        browser,
+      </if>
+      <if test="optUser != null" >
+        opt_user,
+      </if>
+      <if test="realname != null" >
+        realname,
+      </if>
+      <if test="isSuccess != null" >
+        is_success,
+      </if>
+      <if test="reqParam != null" >
+        req_param,
+      </if>
+      <if test="reqUrl != null" >
+        req_url,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="os != null" >
+        #{os,jdbcType=VARCHAR},
+      </if>
+      <if test="browser != null" >
+        #{browser,jdbcType=VARCHAR},
+      </if>
+      <if test="optUser != null" >
+        #{optUser,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="isSuccess != null" >
+        #{isSuccess,jdbcType=VARCHAR},
+      </if>
+      <if test="reqParam != null" >
+        #{reqParam,jdbcType=VARCHAR},
+      </if>
+      <if test="reqUrl != null" >
+        #{reqUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.core.model.sys.sysLog" >
+    update sys_log
+    <set >
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="os != null" >
+        os = #{os,jdbcType=VARCHAR},
+      </if>
+      <if test="browser != null" >
+        browser = #{browser,jdbcType=VARCHAR},
+      </if>
+      <if test="optUser != null" >
+        opt_user = #{optUser,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="isSuccess != null" >
+        is_success = #{isSuccess,jdbcType=VARCHAR},
+      </if>
+      <if test="reqParam != null" >
+        req_param = #{reqParam,jdbcType=VARCHAR},
+      </if>
+      <if test="reqUrl != null" >
+        req_url = #{reqUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.core.model.sys.sysLog" >
+    update sys_log
+    set ip = #{ip,jdbcType=VARCHAR},
+      os = #{os,jdbcType=VARCHAR},
+      browser = #{browser,jdbcType=VARCHAR},
+      opt_user = #{optUser,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      is_success = #{isSuccess,jdbcType=VARCHAR},
+      req_param = #{reqParam,jdbcType=VARCHAR},
+      req_url = #{reqUrl,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

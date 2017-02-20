@@ -1,0 +1,65 @@
+package com.core.model.sys;
+
+import java.util.Date;
+
+public class sysAttach {
+    private Integer id;
+
+    private String name;
+
+    private String attachUrl;
+
+    private Integer relationId;
+
+    private String type;
+
+    private Date createTime;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAttachUrl() {
+        return attachUrl;
+    }
+
+    public void setAttachUrl(String attachUrl) {
+        this.attachUrl = attachUrl;
+    }
+
+    public Integer getRelationId() {
+        return relationId;
+    }
+
+    public void setRelationId(Integer relationId) {
+        this.relationId = relationId;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+}

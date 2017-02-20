@@ -3,17 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>后台管理系统</title>
-	<link rel="stylesheet" type="text/css" href="${ctx}/public/resource/css/bglogin.css" />
-	<script type="text/javascript" src="${ctx}/public/plugins/core/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/resource/css/bglogin.css" />
+	<script type="text/javascript" src="public/plugins/core/jquery-1.11.3.min.js"></script>
 	<script>
 	function refreshCaptcha(){  
-	    document.getElementById("img_captcha").src="${ctx}/public/images/kaptcha?t=" + Math.random();  
+	    document.getElementById("img_captcha").src="captcha.do?t=" + Math.random();  
 	} 
 	</script>
 </head>
 <body>
 	<div>
-	<form id="loginForm" action="${ctx}/sys_user/login" method="post">
+	<form id="loginForm" action="loginCheck.do" method="post">
 		<div class="login_top">
 			<div class="login_title">
 				后台管理系统登录页 
@@ -32,7 +32,7 @@
 				<div class="login_main_yzm">
 					<div>
 					<input type="text" id="captcha" name="captcha"/>
-					<img alt="验证码" src="${ctx}/kaptcha" title="点击更换" id="img_captcha" onclick="javascript:refreshCaptcha();" style="height:45px;width:85px;float:right;margin-right:98px;"/>
+					<img alt="验证码" src="captcha.do" title="点击更换" id="img_captcha" onclick="javascript:refreshCaptcha();" style="height:45px;width:85px;float:right;margin-right:98px;"/>
 					</div>
 				</div>
 				<div class="login_main_submit" >

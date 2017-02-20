@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>
+	<classPathEntry
+		location="mysql-connector-java-5.1.39-bin.jar" />
+	<context id="my" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->  
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/jfinal" userId="root"
+			password="sun123" />
+
+		<javaModelGenerator targetPackage="com.core.model.sys"
+			targetProject="D:/esendev/MARS_WorkPlace/YourMusicAdmin/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="false" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.core.dao.sys"
+			targetProject="D:/esendev/MARS_WorkPlace/YourMusicAdmin/src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator targetPackage="com.core.dao.sys"
+			targetProject="D:/esendev/MARS_WorkPlace/YourMusicAdmin/src/main/java"
+			type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!--<table tableName="T_FEE_AGTBILL" domainObjectName="FeeAgentBill" enableCountByExample="false" 
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false"/> -->
+
+		
+		<table tableName="sys_area" domainObjectName="sysArea"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_attach" domainObjectName="sysAttach"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_department" domainObjectName="sysDepartment"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_dictionary" domainObjectName="sysDictionary"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_log" domainObjectName="sysLog"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_resources" domainObjectName="sysResources"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_role" domainObjectName="sysRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_role_resources" domainObjectName="sysRoleResources"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_user" domainObjectName="sysUser"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		<table tableName="sys_user_role" domainObjectName="sysUserRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+			<!--<columnRenamingRule searchString="^D_" replaceString=""/> -->
+		</table>
+		
+
+	</context>
+</generatorConfiguration>

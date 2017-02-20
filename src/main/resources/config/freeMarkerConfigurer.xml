@@ -24,6 +24,7 @@
             <prop key="template_exception_handler">ignore</prop>  
         </props>  
     </property>  
+    
 </bean>  
 	
 </beans>
